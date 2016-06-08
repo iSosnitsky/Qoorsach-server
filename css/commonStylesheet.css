@@ -1,11 +1,20 @@
 body {
-    background-image: url("/img/qoorsachEnglishBackground.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image: url("/img/sandpaper.png");
+    /*background-size: cover;*/
+    background-repeat: repeat;
+    /*background-attachment: fixed;*/
     background-color: white;
     text-align: center;
     margin-top: 40px;
+}
+
+label{
+    background-color: white;
+    border: solid thin rgba(170,170,170,0.9);
+    margin: 5px;
+    padding: 3px;
+    display: inline-block;
+    text-align: left;
 }
 
 .head{
@@ -24,7 +33,21 @@ body {
     border-bottom-color: #c2c2c2;
 }
 
+.blitz{
+    font-size: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
 .head a {
+    text-decoration: none;
+    color: blue;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+a{
     text-decoration: none;
     color: blue;
     text-align: center;
@@ -43,8 +66,8 @@ body {
 }
 
 .feed ul, li, ol {
-    font-size: 14pt;
-    text-align: justify;
+    font-size: 22px;
+    text-align: left;
 }
 
 body > * {
@@ -61,24 +84,26 @@ body > * {
 }
 
 .feed h1 {
+    font-size: 30pt;
     text-align: center;
     margin-bottom: 35px;
 }
 
 .feed h2 {
+    font-size: 26pt;
     text-align: center;
     margin-bottom: 30px;
     margin-top: 50px;
 }
 
 .feed p {
-    font-size: 14pt;
+    font-size: 18pt;
     text-align: justify;
 }
 
 .feed article {
     width: auto;
-    font-size: 14pt;
+    font-size: 18pt;
     text-align: justify;
     height: auto;
     display: inline-block;
@@ -87,19 +112,20 @@ body > * {
 .feed {
     display: inline-block;
     text-align: center;
-    background-color: whitesmoke;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-image: url('/img/qoorsachEnglishBackground-blurry.jpg');
+    /*background-color: whitesmoke;*/
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-size: cover;*/
+    /*background-image: url('/img/qoorsachEnglishBackground-blurry.jpg');*/
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-    width: 75%;
+    width: 90%;
     min-width: 400px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     padding: 35px;
+    border: outset;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -147,21 +173,21 @@ body > * {
 
 blockquote {
     margin-top: 20px;
-    margin-right: 120px;
-    margin-left: 100px;
+    margin-right: 50px;
+    margin-left: 30px;
     margin-bottom: 20px;
     padding: 15px 30px;
     min-width: 350px;
     text-align: justify;
-    font: 16px/22px italic Times, serif;
-    color: #7e4b19;
-    background-color: white;
-    border-top: 1px solid #e1cc89;
-    border-bottom: 1px solid #e1cc89;
+    font: 18px/24px Times, serif;
+    font-size: inherit;
+    background-color: #c2c2c2;
+    /*border-top: 1px solid #e1cc89;*/
+    /*border-bottom: 1px solid #e1cc89;*/
     /*background-image: url("/img/quotes/openquote1.gif");*/
     background-position: top left;
     background-repeat: no-repeat;
-    border-radius: 7px;
+    border-radius: 1px;
 }
 
 blockquote span {
@@ -177,7 +203,7 @@ blockquote.style1 {
     padding: 15px 30px;
     min-width: 350px;
     text-align: justify;
-    font: 16px/22px italic Times, serif;
+    font: 18px/24px italic Times, serif;
     color: #7e4b19;
     background-color: white;
     border-top: 1px solid #e1cc89;
@@ -259,6 +285,10 @@ blockquote.style1 span {
     box-shadow: 0 0 2px rgba(0,0,0,0.5);
 }
 
+.questions{
+    text-align: left;
+}
+
 .question h4 {
     text-align: center;
 
@@ -302,6 +332,7 @@ blockquote.style1 span {
 }
 
 .center-image-text {
+    font-size: inherit;
     text-align: center;
     clear: both;
     display: block;
@@ -323,12 +354,14 @@ blockquote.style1 span {
 }
 
 .center-image-text span {
+    font-size: 18pt;
     width: 50%;
     max-width: 300px;
 }
 
-.feed input {
-
+.feed input[type=text]{
+    min-width: 200px;
+    width: 70%;
 }
 
 .captcha {

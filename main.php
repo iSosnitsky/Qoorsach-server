@@ -1,157 +1,85 @@
 <?php
-include_once('scripts/global.php');
-include_once('scripts/check.php');
-include_once('scripts/head.php');
-
-$currentStudentData = getCurrentStudentData($databaseLink, $_COOKIE['id'], $_COOKIE['hash']);
-print "<div class='feed' > <p style='text-align: center'>Привет, " . $currentStudentData['Student_Login'] . "<br>
- <a href='scripts/logoff.php'>Разлогин</a></p></div>"
 /**
  * Created by PhpStorm.
- * User: Roman
- * Date: 21.12.15
- * Time: 23:54
- */ ?>
-
+ * User: Roman Kurbanov
+ * Date: 28.02.16
+ * Time: 17:01
+ */
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Система обучения</title>
+    <title>Интерактивные уроки</title>
     <link rel="stylesheet" href="css/commonStylesheet.css">
 </head>
 <body>
 <div class="feed">
-    <h1>Курс иностранного языка</h1>
-    <!--    <h2>Часть 0. Тестовые страницы.</h2>-->
-    <!--    <ol>-->
-    <!--        <li>-->
-    <!--            <a href="qoorsachPattern.html">-->
-    <!--                Страница-шаблон.-->
-    <!--            </a>-->
-    <!--        </li>-->
-    <!--        <li>-->
-    <!--            <a href="pages/hearthstoneText.php">-->
-    <!--                Тест по харстоуну-->
-    <!--            </a>-->
-    <!--        </li>-->
-    <!--    </ol>-->
-    <h2>Часть 1. Глаголы в английском языке</h2>
+    <h1>Технические средства информатизации</h1>
+    <h2>Виды и свойства информации</h2>
     <ol>
         <li>
-            <a href="pages/verbTheory.php">
-                Классификация глаголов в английском языке
+            <a href="pages/informationDefinition.php">
+                Понятие информации
             </a>
         </li>
         <li>
-            <a href="pages/toBeTheory.php">
-                Глагол to be в английском языке
+            <a href="pages/threePartsOfIT.php">
+                Понятие информатики, три её составные части
             </a>
         </li>
         <li>
-            <a href="pages/toHaveTheory.php">
-                Глагол to have в английском языке
-            </a>
-        </li>
-        <li>
-            <a href="pages/modalTheory.php">
-                Модальные глаголы
-            </a>
-        </li>
-        <li>
-            <a href="pages/verbTable.php">
-                Неправильные глаголы
-            </a>
-        </li>
-        <li>
-            <a href="pages/verbTest.php">
-                Тест по глаголам
+            <a href="pages/meansOfMeasurement.php">
+                Единицы измерения информации в ЭВМ
             </a>
         </li>
     </ol>
-    <h2>Часть 2. Существительные в английском языке.</h2>
+    <h2>Классификация технических средств информатизации</h2>
     <ol>
         <li>
-            <a href="pages/nounTheory.php">
-                Определение, классификация
-            </a>
-        </li>
-        <li>
-            <a href="pages/nounWordsGender.php">
-                Род
-            </a>
-        </li>
-        <li>
-            <a href="pages/nounPlural.php">
-                Множественное число
-            </a>
-        </li>
-        <li>
-            <a href="pages/nounCases.php">
-                Падеж
-            </a>
-        </li>
-        <li>
-            <a href="pages/nounFunctions.php">
-                Функции в предложении
-            </a>
-        </li>
-        <li>
-            <a href="pages/nounTest.php">
-                Тест по существительным
+            <a href="pages/ITClassification.php">
+                Классификация технических средств информатизации
             </a>
         </li>
     </ol>
-    <h2>Часть 3. Артикль</h2>
+    <h2>Классификация современных компьютеров и их технических характеристик</h2>
     <ol>
         <li>
-            <a href="pages/articleTheory.php">
-                Определение, происхождение
+            <a href="pages/classicPrincipals.php">
+                Классические принципы устройства ЭВМ
             </a>
         </li>
         <li>
-            <a href="pages/articleDefined.php">
-                Определенный артикль
+            <a href="pages/modernPCs.php">
+                Основные типы современных ПК
             </a>
         </li>
         <li>
-            <a href="pages/articleUndefined.php">
-                Неопределенный артикль
-            </a>
-        </li>
-        <li>
-            <a href="pages/noArticle.php">
-                Отсутствие артикляя
+            <a href="pages/minimumPCreqs.php">
+                Минимальный состав ПК и дополнительные устройства
             </a>
         </li>
     </ol>
-    <h2>
-        Часть 4. Лексический тест
-    </h2>
+    <h2>Основные составляющие и блоки компьютеров</h2>
     <ol>
         <li>
-            <a href="pages/cTest.php">
-                Пройти лексический тест
+            <a href="pages/motherboardFormats.php">
+                Форматы материнских плат
+            </a>
+        </li>
+        <li>
+            <a href="pages/PCComponents.php">
+                Компоненты системного блока
+            </a>
+        </li>
+        <li>
+            <a href="pages/commonSpecifications.php">
+                Общая характеристика постоянной памяти
             </a>
         </li>
     </ol>
 </div>
-<?php
-$testsAndResults = getCurrentStudentTestResults($databaseLink, $_COOKIE['id']);
-if ($testsAndResults) {
-    echo '<div style="text-align:center;" class="feed">
-    <h1>Сданные тесты</h1>';
-    echo "<table class='test-table'> <tr>
-    <th>Название теста</th><th>Результат</th>
-    </tr> ";
-    foreach ($testsAndResults as $testResult) {
-        echo "<tr>" . "<td>" . $testResult[0] . "</td>" .
-            "<td>" . $testResult[1] . "</td>" .
-            "</tr>";
-    }
-    echo '</div>';
-}
-?>
+
 
 </body>
 </html>
