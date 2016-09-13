@@ -5,7 +5,7 @@
  * Date: 20.12.15
  * Time: 20:07
  */
-$databaseLink = mysqli_connect('db.radiushost.net', 'isosnitsky1_mkr', 'Fgsfds12', 'isosnitsky1_mkr', '3306');
+$databaseLink = mysqli_connect('db.radiushost.net', 'isosnitsky1_mkr', 'NotArealPassword', 'isosnitsky1_mkr', '3306');
 
 function getCurrentStudentData($dataLink, $id, $hash)
 {
